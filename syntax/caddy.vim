@@ -4,7 +4,7 @@ syntax keyword caddyDirective jsonp jwt log mailout markdown mime prometheus
 syntax keyword caddyDirective proxy realip redir rewrite root search shutdown
 syntax keyword caddyDirective startup templates tls websocket
 
-syntax match caddyComment '*#.*$'
+syntax match caddyComment ' *#.*$'
 
 highlight default link caddyDirective Keyword
 highlight default link caddyComment Comment
