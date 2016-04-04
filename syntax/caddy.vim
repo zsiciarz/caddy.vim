@@ -13,7 +13,13 @@ syntax keyword caddyDirective startup templates tls websocket
 
 syntax match caddyComment ' *#.*$'
 
+syntax match caddyPlaceholder '{\w\+}'
+
+syntax match caddyEnvVar '\({\$\w\+}\)\|\({%\w\+%}\)'
+
 highlight default link caddyDirective Keyword
 highlight default link caddyComment Comment
+highlight default link caddyPlaceholder Identifier
+highlight default link caddyEnvVar PreProc
 
 let b:current_syntax = "caddy"
