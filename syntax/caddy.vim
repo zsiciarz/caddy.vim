@@ -21,11 +21,14 @@ syntax match caddyAddr '\d\{1,3}\.\d\{1,3}\.\d\{1,3}\.\d\{1,3}\(:\d\+\)\='
 
 syntax match caddyInt '\d\+'
 
+syntax region caddyString start=/\v"/ skip=/\v\\./ end=/\v"/
+
 highlight default link caddyDirective Keyword
 highlight default link caddyComment Comment
 highlight default link caddyPlaceholder Identifier
 highlight default link caddyEnvVar PreProc
 highlight default link caddyAddr Constant
 highlight default link caddyInt Constant
+highlight default link caddyString String
 
 let b:current_syntax = "caddy"
