@@ -15,7 +15,8 @@ syntax match caddyComment /\v *#.*$/
 
 syntax match caddyPlaceholder /\v\{\w+\}/
 
-syntax match caddyEnvVar /\v(\{\$\w+})|(\{\%\w+\%\})/
+syntax match caddyEnvVar /\v\{\$\w+\}/
+syntax match caddyEnvVar /\v\{\%\w+\%\}/
 
 syntax match caddyInt /\v\d+/
 
