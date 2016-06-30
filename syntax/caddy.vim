@@ -19,10 +19,13 @@ syntax match caddyEnvVar '\({\$\w\+}\)\|\({%\w\+%}\)'
 
 syntax match caddyAddr '\d\{1,3}\.\d\{1,3}\.\d\{1,3}\.\d\{1,3}\(:\d\+\)\='
 
+syntax match caddyInt '\d\+'
+
 highlight default link caddyDirective Keyword
 highlight default link caddyComment Comment
 highlight default link caddyPlaceholder Identifier
 highlight default link caddyEnvVar PreProc
 highlight default link caddyAddr Constant
+highlight default link caddyInt Constant
 
 let b:current_syntax = "caddy"
