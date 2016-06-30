@@ -11,15 +11,15 @@ syntax keyword caddyDirective jsonp jwt log mailout markdown mime prometheus
 syntax keyword caddyDirective proxy realip redir rewrite root search shutdown
 syntax keyword caddyDirective startup templates tls websocket
 
-syntax match caddyComment ' *#.*$'
+syntax match caddyComment /\v *#.*$/
 
-syntax match caddyPlaceholder '{\w\+}'
+syntax match caddyPlaceholder /\v\{\w+\}/
 
-syntax match caddyEnvVar '\({\$\w\+}\)\|\({%\w\+%}\)'
+syntax match caddyEnvVar /\v(\{\$\w+})|(\{\%\w+\%\})/
 
-syntax match caddyAddr '\d\{1,3}\.\d\{1,3}\.\d\{1,3}\.\d\{1,3}\(:\d\+\)\='
+syntax match caddyInt /\v\d+/
 
-syntax match caddyInt '\d\+'
+syntax match caddyAddr /\v\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d+)?/
 
 syntax region caddyString start=/\v"/ skip=/\v\\./ end=/\v"/
 
