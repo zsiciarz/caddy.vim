@@ -29,7 +29,7 @@ highlight default link caddyComment Comment
 highlight default link caddyPlaceholder Identifier
 highlight default link caddyEnvVar PreProc
 highlight default link caddyAddr Constant
-highlight default link caddyInt Constant
+highlight default link caddyInt Number
 highlight default link caddyString String
 
 let b:current_syntax = "caddy"
