@@ -20,6 +20,8 @@ syntax match caddyEnvVar /\v\{\%\w+\%\}/
 
 syntax match caddyInt /\v\d+/
 
+syntax keyword caddyBoolean true false
+
 syntax match caddyAddr /\v\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d+)?/
 
 syntax region caddyString start=/\v"/ skip=/\v\\./ end=/\v"/
@@ -31,5 +33,6 @@ highlight default link caddyEnvVar PreProc
 highlight default link caddyAddr Constant
 highlight default link caddyInt Number
 highlight default link caddyString String
+highlight default link caddyBoolean Boolean
 
 let b:current_syntax = "caddy"
