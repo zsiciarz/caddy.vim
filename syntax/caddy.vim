@@ -20,7 +20,7 @@ syntax match caddyEnvVar /\v\{\%\w+\%\}/
 
 syntax match caddyInt /\v\d+/
 
-syntax keyword caddyBoolean true false
+syntax keyword caddyBoolean true false on off
 
 syntax match caddyAddr /\v(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(localhost)(:\d+)?/
 
