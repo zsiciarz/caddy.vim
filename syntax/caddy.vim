@@ -24,6 +24,8 @@ syntax keyword caddyBoolean true false
 
 syntax match caddyAddr /\v\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d+)?/
 
+syntax match caddyPath /\v\s(\.|\.\.)?\/(([-\.\/]|\w)+)?/
+
 syntax region caddyString start=/\v"/ skip=/\v\\./ end=/\v"/
 
 highlight default link caddyDirective Keyword
@@ -34,5 +36,6 @@ highlight default link caddyAddr Constant
 highlight default link caddyInt Number
 highlight default link caddyString String
 highlight default link caddyBoolean Boolean
+highlight default link caddyPath String
 
 let b:current_syntax = "caddy"
