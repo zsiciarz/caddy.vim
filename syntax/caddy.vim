@@ -11,6 +11,9 @@ syntax keyword caddyDirective jsonp jwt log mailout markdown mime pprof promethe
 syntax keyword caddyDirective proxy realip redir rewrite root search shutdown
 syntax keyword caddyDirective startup templates tls upload websocket
 
+syntax keyword coreDirective cache chaos dnssec etcd file health kubernetes
+syntax keyword coreDirective loadbalance secondary
+
 syntax match caddyComment /\v *#.*$/
 
 syntax match caddyPlaceholder /\v\{\w+\}/
@@ -37,5 +40,7 @@ highlight default link caddyInt Number
 highlight default link caddyString String
 highlight default link caddyBoolean Boolean
 highlight default link caddyPath String
+
+highlight default link coreDirective Keyword
 
 let b:current_syntax = "caddy"
